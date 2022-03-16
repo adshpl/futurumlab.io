@@ -1,0 +1,37 @@
+{
+  "name": "futurumlab.io",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean:build": "rimraf dist",
+    "build": "webpack --config ./webpack.config.js",
+    "start": "yarn run build && cd dist && npx http-server",
+    "css:lint": "stylelint src/**/*.scss",
+    "prestart": "yarn run clean:build",
+    "prebuild": "yarn run clean:build"
+  },
+  "author": "Andrei Shapel <mail@shapel.me>",
+  "license": "ISC",
+  "devDependencies": {
+    "copy-webpack-plugin": "^7.0.0",
+    "css-loader": "^5.0.1",
+    "html-webpack-inline-svg-plugin": "^2.3.0",
+    "html-webpack-plugin": "^4.5.1",
+    "http-server": "^14.1.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.32.4",
+    "sass-loader": "^10.1.1",
+    "style-loader": "^2.0.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0",
+    "stylelint-webpack-plugin": "^2.1.1",
+    "webpack": "^5.14.0",
+    "webpack-cli": "^4.3.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
